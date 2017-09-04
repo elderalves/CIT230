@@ -1,0 +1,798 @@
+@import url('https://fonts.googleapis.com/css?family=Merienda:400,700|Source+Sans+Pro:300,400,700,900');
+
+// VARIABLES
+$blue-dark: #1a364c;
+$blue-main: #5bceeb;
+$blue-medium: #2e889e;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+// MISC
+.mobile-menu-btn {
+    display: none;
+}
+.btn {
+    color: #fff;
+    background-color: #ccc;
+    padding: 15px 60px;
+    text-decoration: none;
+}
+.btn-primary {
+    background-color: $blue-main;
+    transition: all .3s ease-out;
+
+    &:hover {
+        background-color: #fff;
+        color: $blue-main;
+        transition: all .3s ease-out;
+    }
+}
+.btn-secondary {
+    background-color: $blue-medium;
+    font-weight: bold;
+
+    &:hover {
+        background-color: $blue-dark;
+        color: #fff;
+        transition: all .3s ease-out;
+    }
+}
+.call-btn {
+    text-align: center;
+}
+
+.title-section {
+    font-family: 'Merienda', cursive;
+    font-size: 50px;
+    text-align: center;
+    color: $blue-medium;
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 301px;
+        height: 100px;
+        position: absolute;
+        top: 0;
+        left: calc(50% - 220px);
+        background-image: url(../images/bg-title-section.png);
+        background-size: cover;
+    }
+}
+
+p {
+    color: #333333;
+}
+
+// STRUCTURE
+.container {
+    width: 1140px;
+    max-width: 100%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    background-image: url('../images/bg-header.jpg');
+    background-size: cover;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 200px;
+        background-image: linear-gradient(180deg, rgba(0,0,0,0.7), rgba(255,255,255,0));
+    }
+
+    .top-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 50px;
+    }
+
+    .nav {
+        ul {
+            display: flex;
+            list-style-type: none;
+        }
+
+        li {
+            margin-left: 15px;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+        }
+    }
+
+    .intro-header {
+        padding-top: 180px;
+        padding-bottom: 250px;
+
+        h1 {
+            color: #fff;
+            font-family: 'Merienda', cursive;
+            text-align: center;
+            font-size: 75px;
+            position: relative;
+            z-index: 2;
+
+            &::after {
+                content: '';
+                background-image: url(../images/bg-intro.png);
+                background-size: cover;
+                width: 495px;
+                height: 161px;
+                position: absolute;
+                top: -47px;
+                left: 120px;
+                z-index: 1;
+            }
+        }
+    }
+
+
+}
+
+.water-wave {
+    position: absolute;
+    bottom: -180px;
+    left: 0;
+    width: 100.1%;
+}
+
+// HOME: Section - WELCOME
+.welcome {
+    padding-top: 250px;
+    position: relative;
+
+    .welcome-bg {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .welcome-first,
+    .welcome-second {
+        display: flex;
+        position: relative;
+    }
+
+    .welcome-image {
+        img {
+            box-shadow: 0px 12px 43px 0px rgba(0, 0, 0, 0.25);  
+        }
+    }
+
+    .welcome-content {
+        position: relative;
+        z-index: 2;
+
+        figure {
+            text-align: center;
+        }
+        h1 {
+            text-align: center;
+            color: $blue-dark;
+            font-size: 50px;
+            font-weight: 900;
+        }
+        h3 {
+            text-align: center;
+            color: $blue-dark;
+            font-weight: 900;
+            margin-top: 10px;
+        }
+
+        p {
+            line-height: 20px;
+        }
+    }
+    .welcome-first {
+        margin-bottom: 50px;
+
+        .welcome-image {
+            position: relative;
+            z-index: 3;
+            margin-right: 50px;
+        }
+
+        .call-btn {
+            margin-top: 70px;
+            position: relative;
+            z-index: 2;
+
+            .btn {
+                position: relative;
+                z-index: 2;
+            }
+
+            &::before {
+                content: "";
+                width: 2px;
+                height: 200px;
+                background-color: #959595;
+                opacity: 0.5;
+                position: absolute;
+                top: -50px;
+                left: calc(50% - 1px);
+                z-index: 1;
+            }
+        }
+    }
+    .welcome-second {
+        .welcome-content {
+            margin-top: 20px;
+            padding-left: 20px;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: "";
+                width: 5px;
+                height: 120px;
+                background-color: $blue-main;
+                left: 0;
+                top: 15px;
+            }
+
+            p {
+                margin: 15px 0;
+            }
+        }
+        .welcome-image {
+            transform: translateY(-180px);
+            position: relative;
+            z-index: 2;
+            margin-left: 50px;
+        }
+    }
+}
+
+// HOME: Section - Adventures
+.adventures-home {
+    position: relative;
+    z-index: 3;
+    padding-bottom: 150px;
+
+    .title-section {
+        margin-bottom: 320px;
+    }
+
+    .adventures-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 50px;
+    }
+
+    .adventures-item {
+        position: relative;
+    }
+
+    .adventures-image {
+        position: absolute;
+        top: -230px;
+        left: -20px;
+        z-index: -1;
+
+        // Animation
+        transform: translateY(220px) scale(0.5);
+        opacity: 0;
+
+        img {
+            position: relative;
+            z-index: -1;
+        }
+    }
+
+    .adventures-content {
+        box-shadow: 0px 12px 43px 0px rgba(0, 0, 0, 0.25);
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 30px;
+        max-width: 320px;
+        min-height: 360px;
+        position: relative;
+        z-index: 1;
+        
+        h2 {
+            text-align: center;
+            color: $blue-medium;
+            margin: 20px 0;
+            font-size: 30px;
+        }
+
+        p {
+            margin-top: 20px;
+        }
+
+        .btn {
+            margin-top: 30px;
+            max-width: 80%;
+            text-align: center;
+            padding: 15px 40px;
+        }
+    }
+
+    .stroke-section {
+        position: absolute;
+        width: 100%;
+        bottom: -50px;
+        left: 0;
+        z-index: 100;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+
+
+// HOME: Section - Guides
+.guides-home {
+    background-image: url('../images/bg-guides-home.jpg');
+    background-size: cover;
+    padding-top: 120px;
+    margin-bottom: 200px;
+    position: relative;
+
+    .title-section {
+        color: #fff;
+
+        &::before {
+            display: none;
+        }
+    }
+
+    .guides-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
+        transform: translateY(110px);
+        position: relative;
+        z-index: 15;
+    }
+
+    .guides-item {
+        background-color: #fff;
+        box-shadow: 0px 12px 43px 0px rgba(0, 0, 0, 0.25);
+
+        // Animation 
+        transform: translateX(1220px);
+        
+
+        img {
+            width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+            color: $blue-medium;
+            font-size: 30px;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 5px;
+            margin-bottom: 40px;
+            color: #20313b;
+            font-weight: 300;
+        }
+
+        
+    }
+
+
+    .stroke-section {
+        position: absolute;
+        width: 100%;
+        bottom: -50px;
+        left: 0;
+        z-index: 10;
+
+        img {
+            width: 100%;
+        }
+    }
+
+}
+
+// HOME: Section - Call Reservation
+.call-reservation {
+    background-image: url('../images/bg-callreservation.jpg');
+    background-size: cover;
+    padding-top: 50px;
+    padding-bottom: 110px;
+    position: relative;
+
+    h1 {
+        font-weight: 300;
+        color: #fff;
+        margin: 80px 0;
+        text-align: center;
+        font-size: 80px;
+        letter-spacing: 10px;
+    }
+
+    .btn {
+        background-color: #fff;
+        color: $blue-medium;
+        font-weight: 700;
+
+        &:hover {
+            background-color: $blue-medium;
+            color: #fff;
+            transition: all .3s ease-out;
+        }
+    }
+
+    .stroke-section {
+        position: absolute;
+        width: 100%;
+        top: -70px;
+        left: 0;
+        z-index: 10;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+// FOOTER
+footer {
+    background-color: $blue-medium;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px;
+    position: relative;
+
+    &::before {
+        content: "";
+        background-color: #fff;
+        width: 2px;
+        height: 50px;
+        position: absolute;
+        left: calc(50% - 1px);
+        top: 0;
+    }
+
+    .logo {
+        img {
+            filter: brightness(6);
+        }
+    }
+
+    .menu {
+        margin-top: 30px;
+
+        ul {
+            display: flex;
+            list-style-type: none;
+        }
+
+        li {
+            margin: 0 10px;
+        }
+
+        a {
+            color: #fff;
+            font-weight: 700;
+            text-decoration: none;
+        }
+    }
+
+}
+
+@media (max-width: 1480px) and (min-width: 940px) {
+    .water-wave {
+        bottom: -105px;
+    }
+}
+
+// TABLET: Breakpoint
+@media (max-width: 768px) {
+    .container {
+        width: 720px;
+        max-width: 100%;
+    }
+
+    // HEADER: Tablet
+    header {
+        .top-header {
+            .logo {
+                img {
+                    width: 150px;
+                }
+            }
+        }
+
+        .intro-header {
+            padding-top: 100px;
+            padding-bottom: 240px;
+
+            h1 {
+                font-size: 49px;
+                text-align: center;
+
+                &::after {
+                    top: -33px;
+                    left: 61px;
+                    width: 349px;
+                    height: 112px;
+                }
+            }
+        }
+    }
+
+    .water-wave {
+        bottom: -75px;
+    }
+
+    // HOME: Tablet - Section - Welcome
+    .welcome {
+        padding-top: 120px;
+
+        .welcome-first {
+            flex-direction: column;
+
+            .welcome-content {
+                order: 1;
+
+                p {
+                    padding: 0 30px;
+                }
+            }
+
+            .welcome-image {
+                order: 2;
+                margin-right: 0;
+                margin-top: 50px;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        .welcome-second {
+            .welcome-image {
+                display: none;
+            }
+
+            .welcome-content {
+                margin-top: 0;
+            }
+        }
+    }
+
+    // HOME: Tablet - Section - Adventures
+    .adventures-home {
+        margin-top: 90px;
+        padding-bottom: 0;
+
+        .adventures-list {
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
+
+        .adventures-content {
+            max-width: 410px;
+        }
+
+        .adventures-image {
+            top: -265px;
+            left: -34px;
+
+            img {
+                width: 500px;
+            }
+        }
+
+        .adventures-item {
+            margin-bottom: 290px;
+            
+        }
+
+        .stroke-section {
+            bottom: -28px;
+        }
+    }
+
+    // HOME: Tablet - Section - Guides
+    .guides-home {
+        padding-top: 80px;
+
+        .guides-item {
+            h2 {
+                font-size: 25px;
+            }
+        }
+
+        .stroke-section {
+            bottom: -23px;
+        }
+    }
+
+    // HOME: Tablet - Section - Call Reservation
+    .call-reservation {
+        h1 {
+            font-size: 55px;
+        }
+
+        .stroke-section {
+            top: -23px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 414px) {
+    .container {
+        width: auto;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    header {
+        .mobile-menu-btn {
+            display: block;
+
+            svg {   
+                width: 30px;
+                height: 30px;
+            }
+            
+        }
+
+        .nav {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            background-color: rgb(46, 136, 158);
+            top: 133px;
+            z-index: 5;
+
+            // Animation
+            transform: translateY(-368px);
+            transition: all .3s ease-out;
+
+            &.show {
+                transform: translateY(0);
+                transition: all .3s ease-out;
+            }
+
+            ul {
+                flex-direction: column;
+            }
+
+            li {
+                height: 45px;
+                display: flex;
+                align-items: center;
+                margin-left: 40px;
+            }
+        }
+
+        .intro-header {
+            h1::after {
+                top: -32px;
+                left: 11px;
+                width: 321px;
+                height: 102px;
+            }
+        }
+    }
+
+    .title-section {
+        font-size: 30px;
+
+        &::before {
+            width: 213px;
+            height: 71px;
+            top: -9px;
+            left: calc(50% - 136px);
+        }
+    }
+
+    .water-wave {
+        bottom: -34px;
+    }
+
+    // HOME: Mobile - Section - Adventures
+    .adventures-home {
+        
+        .title-section {
+            margin-bottom: 250px;
+        }
+
+        .adventures-image {
+            top: -178px;
+            left: -11px;
+
+            img {
+                width: 300px;
+            }
+        }
+
+        .adventures-item {
+            margin-bottom: 215px;
+        }
+
+        .adventures-content {
+            max-width: 290px;
+        }
+
+        .stroke-section {
+            bottom: -15px;
+        }
+    }
+
+    // HOME: Mobile - Section - Guides
+    .guides-home {
+        padding-bottom: 110px;
+        margin-bottom: 1100px;
+
+        .guides-list {
+            position: absolute;
+            grid-template-columns: 1fr;
+            transform: translateY(0);
+            top: 30px;
+            width: 100%;
+            left: 0;
+            padding: 0 30px;
+        }
+    }
+
+    // HOME: Mobile - Section - Call Reservation
+    .call-reservation {
+        padding-top: 10px;
+
+        .stroke-section {
+            top: -12px;
+        }
+    }
+
+    // FOOTER : Mobile
+    footer {
+        .menu {
+            ul {
+                flex-direction: column;
+            }
+
+            li {
+                margin: 4px 10px;
+                text-align: center;
+            }
+        }
+    }
+}
