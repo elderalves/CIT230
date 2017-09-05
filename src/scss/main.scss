@@ -666,6 +666,8 @@ footer {
     header {
         .mobile-menu-btn {
             display: block;
+            border: none;
+            background-color: transparent;
 
             svg {   
                 width: 30px;

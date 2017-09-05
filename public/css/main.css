@@ -422,7 +422,9 @@ footer {
     padding-right: 15px;
     padding-left: 15px; }
   header .mobile-menu-btn {
-    display: block; }
+    display: block;
+    border: none;
+    background-color: transparent; }
     header .mobile-menu-btn svg {
       width: 30px;
       height: 30px; }
