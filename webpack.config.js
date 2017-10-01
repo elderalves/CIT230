@@ -34,17 +34,27 @@ module.exports = {
                 options: {
                     name: '../images/[name].[ext]'
                 }
+            },
+            {
+                test: /\.vue$/,
+                loader: "vue-loader",
+                options: {
+                    loaders: {
+                        js: "babel-loader"
+                    }
+                }
             }
         ]
+    },
+    resolve: {
+        alias: {
+            vue: 'vue/dist/vue.js'
+        }
     },
     plugins: [
         extractSass,
         new BrowserSyncPlugin({
-            host: 'localhost',
-            port: 3000,
-            server: {
-                baseDir: ['public']
-            }
+            proxy: 'http://localhost:8888/mtc/byui/cit230/assignments/salmonriver/public/'
         })
     ]
 }

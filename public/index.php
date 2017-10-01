@@ -1,41 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Salmon River Adventures</title>
+<?php 
+    
+    $page = "home";
+    $title = "HOME";
+    
+    require_once "inc/header.php"; 
 
-    <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
-    <header>
-        <div class="container">  
-            <div class="top-header">
-                <div class="logo">
-                    <a href="#">
-                        <img src="images/logo-salmonriver.png" alt="Salmon River Adventures"/>
-                    </a>
-                </div>
-                <div class="nav">
-                    <ul>
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#">ADVENTURES</a></li>
-                        <li><a href="#">GUIDES</a></li>
-                        <li><a href="#">BOOK A TRIP</a></li>
-                        <li><a href="#">CONTACT</a></li>
-                    </ul>
-                </div>
-                <button class="mobile-menu-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 24" enable-background="new 0 0 24 24" width="512px" height="512px">
-                        <g>
-                            <path d="M24,3c0-0.6-0.4-1-1-1H1C0.4,2,0,2.4,0,3v2c0,0.6,0.4,1,1,1h22c0.6,0,1-0.4,1-1V3z" fill="#FFFFFF"/>
-                            <path d="M24,11c0-0.6-0.4-1-1-1H1c-0.6,0-1,0.4-1,1v2c0,0.6,0.4,1,1,1h22c0.6,0,1-0.4,1-1V11z" fill="#FFFFFF"/>
-                            <path d="M24,19c0-0.6-0.4-1-1-1H1c-0.6,0-1,0.4-1,1v2c0,0.6,0.4,1,1,1h22c0.6,0,1-0.4,1-1V19z" fill="#FFFFFF"/>
-                        </g>
-                    </svg>                          
-                </button>
-            </div>
+?>
 
             <div class="intro-header">
                 <h1>The River of no Return</h1>
@@ -93,7 +63,7 @@
 
     <section class="welcome">
         <div class="welcome-bg">
-            <img src="images/bg-welcome.gif" />
+            <img src="images/bg-welcome.gif" alt="Welcome Background" />
         </div>
         <div class="container">
             <div class="welcome-first">
@@ -133,61 +103,7 @@
         </div>
     </section>
 
-    <section class="adventures-home">
-        <div class="title-section">
-            <h2>Adventures</h2>
-        </div>
-
-        <div class="container">    
-            <div class="adventures-list">
-                <div class="adventures-item">
-                    <div class="adventures-image">
-                        <img src="images/adventure-thumb-1.jpg" alt="Adventure - Water Rafting">
-                    </div>
-                    <div class="adventures-content">
-                        <h2>WATER RAFTING</h2>
-                        <p>
-                            Looking for that roller coaster rush on the water? Then our white-water 
-                            rafting package is your ticket. Rapids are a mix of beginner to intermediate runs, 
-                            and great for all groups, young and old.
-                        </p>
-                        <a href="#" class="btn btn-secondary">LET'S DO IT!</a>
-                    </div>
-                </div>
-                <div class="adventures-item">
-                    <div class="adventures-image">
-                        <img src="images/adventure-thumb-2.jpg" alt="Adventure - Camping">
-                    </div>
-                    <div class="adventures-content">
-                        <h2>CAMPING</h2>
-                        <p>
-                            Looking for that roller coaster rush on the water? Then our white-water 
-                            rafting package is your ticket. Rapids are a mix of beginner to intermediate runs, 
-                            and great for all groups, young and old.
-                        </p>
-                        <a href="#" class="btn btn-secondary">LET'S DO IT!</a>
-                    </div>
-                </div>
-                <div class="adventures-item">
-                    <div class="adventures-image">
-                        <img src="images/adventure-thumb-3.jpg" alt="Adventure - Fishing">
-                    </div>
-                    <div class="adventures-content">
-                        <h2>FISHING</h2>
-                        <p>
-                            Fishing is one of the best and favorite past-times of the great outdoors. 
-                            The Salmon River provides some of the best fishing in the country if not 
-                            this hemi-shpere. 
-                        </p>
-                        <a href="#" class="btn btn-secondary">LET'S DO IT!</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="stroke-section">
-            <img src="images/stroke-1.png" />
-        </div>
-    </section>
+    <div id="app"></div>
 
     <section class="guides-home">
         <div class="title-section">
@@ -196,7 +112,7 @@
         <div class="container">    
             <div class="guides-list">
                 <div class="guides-item">
-                    <a href="#">
+                    <a href="guides.php">
                         <div class="guides-image">
                             <img src="images/guide-thumb-1.jpg" alt="Guide - Mariah Oliver">
                         </div>
@@ -209,7 +125,7 @@
                     </a>
                 </div>
                 <div class="guides-item">
-                    <a href="#">
+                    <a href="guides.php">
                         <div class="guides-image">
                             <img src="images/guide-thumb-2.jpg" alt="Guide - Steve Newport">
                         </div>
@@ -222,7 +138,7 @@
                     </a>
                 </div>
                 <div class="guides-item">
-                    <a href="#">
+                    <a href="guides.php">
                         <div class="guides-image">
                             <img src="images/guide-thumb-3.jpg" alt="Guide - Patrick Specter">
                         </div>
@@ -237,41 +153,8 @@
             </div>
         </div>
         <div class="stroke-section">
-            <img src="images/stroke-1.png" />
+            <img src="images/stroke-1.png" alt="Visual Design Stroke" />
         </div>
     </section>
 
-    <section class="call-reservation">
-        <div class="container">
-            <h1>THE RIVER OF NO RETURN</h1>
-            <div class="call-btn">
-                <a href="#" class="btn">MAKE A RESERVATION</a>
-            </div>
-        </div>
-        <div class="stroke-section">
-            <img src="images/stroke-1.png" />
-        </div>
-    </section>
-
-    <footer>
-        <div class="logo">
-            <img src="images/logo-symbol.png" alt="Logo - Salmon River">
-        </div>
-        <div class="menu">
-            <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">ADVENTURES</a></li>
-                <li><a href="#">GUIDES</a></li>
-                <li><a href="#">BOOK A TRIP</a></li>
-                <li><a href="#">CONTACT</a></li>
-            </ul>
-        </div>
-    </footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-    <script src="js/animation.js"></script>
-    <script src="js/main.js"></script>
-    
-</body>
-</html>
+    <?php require_once "inc/footer.php"; ?>

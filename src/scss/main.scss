@@ -86,6 +86,18 @@ header {
     background-size: cover;
     position: relative;
 
+    body:not(.home) & {
+        background-image: none;
+        background-color: #2e889e;
+        padding-bottom: 40px;
+        border-bottom: 5px solid #5bceeb;
+        margin-bottom: 50px;
+
+        &::before {
+            display: none;
+        }
+    }
+
     &::before {
         content: "";
         position: absolute;
@@ -261,7 +273,7 @@ header {
             }
         }
         .welcome-image {
-            transform: translateY(-180px);
+            transform: translateY(-103px);
             position: relative;
             z-index: 2;
             margin-left: 50px;
@@ -353,19 +365,31 @@ header {
 
 // HOME: Section - Guides
 .guides-home {
-    background-image: url('../images/bg-guides-home.jpg');
-    background-size: cover;
-    padding-top: 120px;
     margin-bottom: 200px;
     position: relative;
 
-    .title-section {
-        color: #fff;
+    body.home & {
+        padding-top: 120px;
+        background-image: url('../images/bg-guides-home.jpg');
+        background-size: cover;
 
+        .title-section {
+            color: #fff;
+    
+            &::before {
+                display: none;
+            }
+        }
+
+    }
+
+    .title-section {
         &::before {
-            display: none;
+            left: calc(50% - 157px);
         }
     }
+
+    
 
     .guides-list {
         display: grid;
@@ -408,6 +432,22 @@ header {
         }
 
         
+    }
+
+    .guides-info {
+        padding: 0 30px;
+        margin-bottom: 25px;
+        margin-top: -20px;
+
+        h4 {
+            text-align: center;
+            color: #2e889e;
+            cursor: pointer;
+        }
+
+        .info {
+            display: none;
+        }
     }
 
 
@@ -511,11 +551,258 @@ footer {
         }
     }
 
+    .overview {
+        margin-top: 20px;
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+
 }
 
-@media (max-width: 1480px) and (min-width: 940px) {
-    .water-wave {
-        bottom: -105px;
+// PAGE: Book a Trip
+.table {
+    margin: 0 0 40px 0;
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    display: table;
+    margin-top: 40px;
+}
+  @media screen and (max-width: 580px) {
+    .table {
+      display: block;
+    }
+  }
+  
+.row {
+    display: table-row;
+    background: #f6f6f6;
+
+    &:nth-of-type(odd) {
+        background: #e9e9e9;
+    }
+
+    &.header {
+        font-weight: 700;
+        font-size: 20px;
+        color: #ffffff;
+        background: #2E889E;
+    }
+}
+
+  @media screen and (max-width: 580px) {
+    .row {
+      padding: 8px 0;
+      display: block;
+    }
+  }
+  
+  .cell {
+    padding: 6px 12px;
+    display: table-cell;
+  }
+  @media screen and (max-width: 580px) {
+    .cell {
+      padding: 2px 12px;
+      display: block;
+    }
+  }
+
+.form {
+    z-index: 15;
+    position: relative;
+    background: #FFFFFF;
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    margin: 100px auto 10px;
+    overflow: hidden;
+    margin-bottom: 50px;
+
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .form-header {
+        margin: 0 0 40px;
+      }
+    .form-header h1 {
+        padding: 4px 0;
+        color: #2E889E;
+        font-size: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    .form-panel {
+        padding: 60px;
+        box-sizing: border-box;
+    }
+
+    .form-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 0 20px;
+
+        .bookatrip &:first-child {
+            flex-basis: 500px;
+        }
+
+        .bookatrip &:nth-child(4) {
+            flex-grow: .5;
+        }
+        .bookatrip &:nth-child(5) {
+            flex-grow: .4;
+        }
+
+        .bookatrip &:nth-child(6) {
+            flex-grow: 1;
+        }
+
+        &:last-child {
+            margin: 0;
+        }
+
+        label {
+            display: block;
+            margin: 0 0 10px;
+            color: rgba(0, 0, 0, 0.6);
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 1;
+            text-transform: uppercase;
+            letter-spacing: .2em;
+        }
+
+        input {
+            outline: none;
+            display: block;
+            background: rgba(0, 0, 0, 0.1);
+            width: 100%;
+            border: 0;
+            border-radius: 4px;
+            box-sizing: border-box;
+            padding: 12px 20px;
+            color: rgba(0, 0, 0, 0.6);
+            font-family: inherit;
+            font-size: inherit;
+            font-weight: 500;
+            line-height: inherit;
+            transition: 0.3s ease;
+
+            &:focus {
+                color: rgba(0, 0, 0, 0.8);
+            }
+        }
+
+        textarea {
+            outline: none;
+            display: block;
+            background: rgba(0, 0, 0, 0.1);
+            width: 100%;
+            border: 0;
+            border-radius: 4px;
+            box-sizing: border-box;
+            padding: 12px 20px;
+            color: rgba(0, 0, 0, 0.6);
+            font-family: inherit;
+            font-size: inherit;
+            font-weight: 500;
+            line-height: inherit;
+            transition: 0.3s ease;
+
+            &:focus {
+                color: rgba(0, 0, 0, 0.8);
+            }
+        }
+
+        button {
+            outline: none;
+            background: #2E889E;
+            width: 100%;
+            border: 0;
+            border-radius: 4px;
+            padding: 12px 20px;
+            color: #FFFFFF;
+            font-family: inherit;
+            font-size: inherit;
+            font-weight: 500;
+            line-height: inherit;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+    }
+}
+
+// PAGE: Contact Us
+.contact-page {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 50px;
+    }
+
+    form {
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    .contact-info {
+        margin-top: 100px;
+
+        h2 {
+            font-size: 25px;
+            margin-bottom: 15px;
+            color: #2e889e;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+// SINGLE: Adventure
+.adventure-single {
+    margin-bottom: 80px;
+
+    .container {
+        margin-top: 70px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 50px;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    h4 {
+        margin-bottom: 5px;
+        color: #2e889e;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    .info {
+        margin-bottom: 20px;
+    }
+}
+
+// PAGE: Overview Video
+.overview-page {
+    .container {
+        margin-top: 80px;
+        margin-bottom: 80px;
+        text-align: center;
     }
 }
 
@@ -602,7 +889,6 @@ footer {
 
         .adventures-list {
             grid-template-columns: 1fr;
-            justify-items: center;
         }
 
         .adventures-content {
@@ -739,7 +1025,7 @@ footer {
 
         .adventures-image {
             top: -178px;
-            left: -11px;
+            left: 20px;
 
             img {
                 width: 300px;
@@ -752,6 +1038,7 @@ footer {
 
         .adventures-content {
             max-width: 290px;
+            margin: 0 auto;
         }
 
         .stroke-section {
@@ -782,6 +1069,10 @@ footer {
         .stroke-section {
             top: -12px;
         }
+    }
+
+    .contact-page .container {
+        grid-template-columns: 1fr;
     }
 
     // FOOTER : Mobile
